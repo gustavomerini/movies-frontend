@@ -1,0 +1,4 @@
+<div *ngIf="movies; else showLoader">
+  <app-movies-table [movies]="movies"></app-movies-table>
+</div>
+<ng-template #showLoader> Loading.... </ng-template>
