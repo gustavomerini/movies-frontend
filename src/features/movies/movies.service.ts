@@ -18,7 +18,6 @@ export class MoviesService {
   }
 
   updateMovie(movie: Movie) {
-    debugger;
     return this.http.patch(`http://localhost:3000/db/${movie.id}`, movie);
   }
 

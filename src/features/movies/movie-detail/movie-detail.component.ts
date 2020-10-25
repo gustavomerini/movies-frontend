@@ -16,6 +16,14 @@ export class MovieDetailComponent implements OnInit {
   movie: Movie = null;
   formGroup: FormGroup;
   isNew: boolean = false;
+  fields = [
+    { id: 'name', label: 'Name' },
+    { id: 'year', label: 'Year' },
+    { id: 'director', label: 'Director' },
+    { id: 'genre', label: 'Genre' },
+    { id: 'description', label: 'Description' },
+    { id: 'poster', label: 'Poster' },
+  ];
 
   private ngUnsubscribe = new Subject();
 
@@ -27,7 +35,6 @@ export class MovieDetailComponent implements OnInit {
     private formBuilder: FormBuilder
   ) {
     this.movie = this.movieService.getCurrentMovie();
-    console.log(this.movie);
   }
 
   ngOnInit(): void {

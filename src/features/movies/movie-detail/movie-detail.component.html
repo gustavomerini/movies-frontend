@@ -1,41 +1,24 @@
-<div class=" container">
+<div class="container">
   <form [formGroup]="formGroup">
     <div class="form-container">
       <app-form-field
+        *ngFor="let field of fields"
         [parentForm]="formGroup"
-        [field]="'name'"
-        [label]="'Name'"
-      ></app-form-field>
-      <app-form-field
-        [parentForm]="formGroup"
-        [field]="'year'"
-        [label]="'Year'"
-      ></app-form-field>
-      <app-form-field
-        [parentForm]="formGroup"
-        [field]="'director'"
-        [label]="'Director'"
-      ></app-form-field>
-      <app-form-field
-        [parentForm]="formGroup"
-        [field]="'genre'"
-        [label]="'Genre'"
-      ></app-form-field>
-      <app-form-field
-        [parentForm]="formGroup"
-        [field]="'description'"
-        [label]="'Description'"
-      ></app-form-field>
-      <app-form-field
-        [parentForm]="formGroup"
-        [field]="'poster'"
-        [label]="'Poster'"
+        [field]="field.id"
+        [label]="field.label"
       ></app-form-field>
     </div>
   </form>
   <div class="button-container">
     <button mat-flat-button (click)="saveMovie()" color="primary">Save</button>
-    <button *ngIf="!isNew" mat-stroked-button (click)="confirmDialog()" color="primary">Delete</button>
+    <button
+      *ngIf="!isNew"
+      mat-stroked-button
+      (click)="confirmDialog()"
+      color="primary"
+    >
+      Delete
+    </button>
     <button mat-button (click)="goBack()">Cancel</button>
   </div>
 </div>
