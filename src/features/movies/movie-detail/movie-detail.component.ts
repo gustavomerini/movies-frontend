@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 import { Movie } from 'src/shared/interfaces/movies';
 
 @Component({
@@ -10,23 +9,17 @@ import { Movie } from 'src/shared/interfaces/movies';
   styleUrls: ['./movies.component.scss'],
 })
 export class MoviesComponent implements OnInit {
+  movie: Movie = null;
   private ngUnsubscribe = new Subject();
-  public movies: Movie[];
 
-  constructor(private route: ActivatedRoute) {}
-
-  ngOnInit(): void {
-    this.route.data
-      .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe((data: any) => this.onRouteDataChange(data));
+  constructor(private router: Router) {
+    this.movie = this.router.getCurrentNavigation().extras.state.movie;
   }
+
+  ngOnInit(): void {}
 
   ngOnDestroy() {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
-  }
-
-  public onRouteDataChange(data: any) {
-    this.movies = data.movies.db;
   }
 }

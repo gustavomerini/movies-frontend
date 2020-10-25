@@ -23,7 +23,9 @@
     <ng-container matColumnDef="action" sticky>
       <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
       <mat-cell *matCellDef="let row">
-        <button mat-stroked-button>Edit</button></mat-cell
+        <button mat-stroked-button (click)="goToPage(row)">
+          Edit
+        </button></mat-cell
       >
     </ng-container>
 

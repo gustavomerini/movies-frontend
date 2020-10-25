@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { TableRowComponent } from './components/table-row/table-row';
 
 @NgModule({
   imports: [],
@@ -23,9 +22,8 @@ import { TableRowComponent } from './components/table-row/table-row';
     MatInputModule,
     MatFormFieldModule,
     NavbarComponent,
-    TableRowComponent,
   ],
-  declarations: [NavbarComponent, TableRowComponent],
+  declarations: [NavbarComponent],
   providers: [],
 })
 export class SharedModule {}
