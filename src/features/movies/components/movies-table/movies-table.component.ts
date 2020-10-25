@@ -9,6 +9,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Movie } from 'src/shared/interfaces/movies';
+import { MoviesService } from '../../movies.service';
 
 @Component({
   selector: 'app-movies-table',
@@ -21,7 +22,7 @@ export class MoviesTableComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['name', 'year', 'director', 'genre', 'action'];
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private movieService: MoviesService) {}
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -37,6 +38,7 @@ export class MoviesTableComponent implements OnInit, AfterViewInit {
   }
 
   goToPage(row: Movie) {
-    this.router.navigate([`${row.id}`]);
+    this.movieService.setCurrentMovie(row);
+    this.router.navigate([`/movies/${row.id}`]);
   }
 }

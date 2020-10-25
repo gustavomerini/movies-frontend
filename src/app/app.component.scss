@@ -1,0 +1,15 @@
+.navbar {
+  width: 100%;
+}
+
+.app-layout {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@media (min-width: 641px) {
+  .app-layout {
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+}

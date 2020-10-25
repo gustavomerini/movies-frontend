@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { SharedModule } from 'src/shared/shared.module';
-import { FeaturesRoutingModule } from './features-routing.module';
-import { MoviesTableComponent } from './movies/components/movies-table/movies-table.component';
-import { MoviesComponent } from './movies/movies.component';
-import { MoviesService } from './movies/movies.service';
+import { MoviesModule } from './movies/movies.module';
 
 @NgModule({
-    imports: [SharedModule, FeaturesRoutingModule],
-    exports: [],
-    declarations: [MoviesComponent, MoviesTableComponent],
-    providers: [MoviesService],
+  imports: [SharedModule, MoviesModule],
+  exports: [RouterModule],
+  declarations: [],
+  providers: [],
 })
-export class FeaturesModule { }
+export class FeaturesModule {}

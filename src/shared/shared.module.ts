@@ -8,9 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
-  imports: [],
+  imports: [MatToolbarModule],
   exports: [
     CommonModule,
     FormsModule,
