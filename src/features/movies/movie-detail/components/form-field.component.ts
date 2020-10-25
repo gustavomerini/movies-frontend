@@ -28,7 +28,6 @@ export class FormFieldComponent implements OnInit {
 
   ngOnInit() {
     this.parentForm.reset();
-    console.log(this.field, this.label);
   }
 
   getErrorMessage(field: string) {

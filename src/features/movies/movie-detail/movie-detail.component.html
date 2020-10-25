@@ -34,8 +34,8 @@
     </div>
   </form>
   <div class="button-container">
-    <button mat-flat-button (click)="onSubmit()" color="primary">Save</button>
-    <button mat-stroked-button color="primary">Delete</button>
+    <button mat-flat-button (click)="saveMovie()" color="primary">Save</button>
+    <button *ngIf="!isNew" mat-stroked-button (click)="confirmDialog()" color="primary">Delete</button>
     <button mat-button (click)="goBack()">Cancel</button>
   </div>
 </div>

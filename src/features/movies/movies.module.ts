@@ -7,6 +7,7 @@ import { MoviesService } from './movies.service';
 import { MoviesTableComponent } from './components/movies-table/movies-table.component';
 import { FormFieldComponent } from './movie-detail/components/form-field.component';
 import { SharedModule } from 'src/shared/shared.module';
+import { MatDialog } from '@angular/material/dialog';
 
 @Injectable()
 export class MoviesResolver {

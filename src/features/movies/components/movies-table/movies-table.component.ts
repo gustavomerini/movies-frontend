@@ -37,6 +37,10 @@ export class MoviesTableComponent implements OnInit, AfterViewInit {
     this.dataSource = new MatTableDataSource<Movie>(this.movies);
   }
 
+  onAdd() {
+    this.router.navigate([`/movies/new`]);
+  }
+
   goToPage(row: Movie) {
     this.movieService.setCurrentMovie(row);
     this.router.navigate([`/movies/${row.id}`]);
