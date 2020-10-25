@@ -5,7 +5,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { TableRowComponent } from './components/table-row/table-row';
 
 @NgModule({
   imports: [],
@@ -14,13 +17,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NavbarComponent,
+    MatPaginatorModule,
+    MatButtonModule,
     MatTableModule,
     MatInputModule,
     MatFormFieldModule,
-    NavbarComponent
+    NavbarComponent,
+    TableRowComponent,
   ],
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, TableRowComponent],
   providers: [],
 })
 export class SharedModule {}
