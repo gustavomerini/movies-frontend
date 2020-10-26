@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PreloadAllModules, RouterModule } from '@angular/router';
+import { CdkColumnDef } from '@angular/cdk/table';
 
 import { SharedModule } from 'src/shared/shared.module';
 import { AppComponent } from './app.component';
@@ -20,7 +21,7 @@ import { FeaturesModule } from './features/features.module';
     FeaturesModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [CdkColumnDef],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

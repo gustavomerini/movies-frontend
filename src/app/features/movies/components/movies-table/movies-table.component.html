@@ -37,7 +37,7 @@
 
     <!-- Row shown when there is no matching data. -->
     <mat-row *matNoDataRow>
-      <mat-cell colspan="4">
+      <mat-cell *matCellDef="let row" colspan="4">
         No data matching the filter "{{ input.value }}"
       </mat-cell>
     </mat-row>
