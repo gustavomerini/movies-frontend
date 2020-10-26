@@ -46,7 +46,7 @@ export class MovieDetailComponent implements OnInit {
         return;
       }
       this.movieService.getMovies().subscribe((response: any) => {
-        this.movie = response.db.filter((movie) => movie.id == params['id'])[0];
+        this.movie = response.movies.filter((movie) => movie.id == params['id'])[0];
         this.formGroup.patchValue(this.movie);
       });
     });

@@ -27,7 +27,7 @@ const routes: Routes = [
     path: 'movies',
     component: MoviesComponent,
     resolve: {
-      movies: MoviesResolver,
+      data: MoviesResolver,
     },
   },
   {

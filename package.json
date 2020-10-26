@@ -3,13 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start:app": "ng serve",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start": "concurrently — kill-others \"npm run mock:server\" \"npm run start:app\"",
-    "mock:server": "json-server --watch mocks/db.json",
     "postinstall": "ngcc"
   },
   "private": true,

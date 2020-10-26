@@ -27,7 +27,7 @@ export class MoviesComponent implements OnInit {
     this.ngUnsubscribe.complete();
   }
 
-  public onRouteDataChange(data: any) {
-    this.movies = data.movies.db;
+  public onRouteDataChange(response: any) {
+    this.movies = response.data.movies;
   }
 }
