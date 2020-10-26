@@ -1,21 +1,12 @@
 {
   "db": [
     {
-      "id": "e8dbc41b-f505-4302-8683-32e7adb79d10",
-      "name": "Joker Teste",
-      "year": "2019",
-      "director": "Fulano de tal",
-      "genre": "Action",
-      "description": "Joker movie from Batman universe",
-      "poster": "encurtador.com.br/jzH13"
-    },
-    {
       "id": "f40b2bb4-cbc1-41b1-8c78-b97a1dabf15d",
       "name": "Cyberpunk 2077",
       "year": "2020",
       "director": "Fulano de tal",
       "genre": "Adventure",
-      "description": "Harry potter and his friends have to deal with the chamber of secrets",
+      "description": "Cyberpunk",
       "poster": "encurtador.com.br/jzH13"
     },
     {

@@ -8,6 +8,7 @@ import {
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+
 import { Movie } from 'src/shared/interfaces/movies';
 import { MoviesService } from '../../movies.service';
 

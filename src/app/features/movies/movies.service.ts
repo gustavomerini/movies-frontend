@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 import { Movie } from 'src/shared/interfaces/movies';
 import { uuidv4 } from 'src/shared/utils/utils';
 

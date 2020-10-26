@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subject, Subscription } from 'rxjs';
+import { Subject } from 'rxjs';
+
 import { ConfirmDialogComponent } from 'src/shared/components/dialog/dialog.component';
 import { Movie } from 'src/shared/interfaces/movies';
 import { MoviesService } from '../movies.service';
